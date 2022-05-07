@@ -6,13 +6,16 @@ This is a common platform for the students and the teacher for the tution class 
 
 -  Welcome page with the teacher's advertisements and notices. 
 -  Will have a wall to pulish the teacher's notices and posts.
+-  User Settings and User Permissions maintainin.
+-  Birtday Reminder and gitt allocation
 -  Comment section to make the conversations.
 -  A messenger application to communication each other. 
 -  Assignment room  
 -  Exam room
 -  Reports room  
 -  Lecture Room  
--  Admin panel with statical analitics  
+-  Admin panel with statical analitics
+-  Time slot booking to contact teacher  
 
 
 ## Prerequisites
