@@ -2,16 +2,17 @@
 
 ## Introduction
 
-This is a common platform for the students and the teacher in the tutions. Hope to provide following features in the future  
+This is a common platform for the students and the teacher for the tution class sector. Hope to provide following features in the future  
 
-Landing page with advertisements and notices,  
-A wall with the posts and the comment section  
-A messenger application  
-Tab for the assignments  
-Tab for the exams  
-Tab for the reports  
-Lecture Room  
-Admin panel  
+-  Welcome page with the teacher's advertisements and notices. 
+-  Will have a wall to pulish the teacher's notices and posts.
+-  Comment section to make the conversations.
+-  A messenger application to communication each other. 
+-  Assignment room  
+-  Exam room
+-  Reports room  
+-  Lecture Room  
+-  Admin panel with statical analitics  
 
 
 ## Prerequisites
