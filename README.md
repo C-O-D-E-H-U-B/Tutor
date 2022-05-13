@@ -55,3 +55,7 @@ springdoc:
   pathsToMatch: /api/**
 ```
 
+## Swagger UI
+
+Swagger UI can be accessed via `http://localhost:8080/swagger-ui/index.html`
+
