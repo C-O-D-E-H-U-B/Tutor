@@ -1,4 +1,4 @@
-package com.codehub.tutor.core;
+package com.codehub.tutor.core.service.impl;
 
 import com.codehub.tutor.core.dao.AdvertisementDAO;
 import com.codehub.tutor.core.modal.Advertisement;
