@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name= "advertisements")
-public class Advertisements {
+public class Advertisement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long adId;
