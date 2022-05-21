@@ -19,7 +19,7 @@ public enum AdvertisementType {
      */
     SILVER(3);
 
-    int advertisementType;
+    private final int advertisementType;
 
     AdvertisementType(int advertisementType) {
         this.advertisementType = advertisementType;
