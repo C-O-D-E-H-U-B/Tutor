@@ -5,7 +5,7 @@
 This is a common platform for the students and the teacher for the tution class sector. Hope to provide following features in the future  
 
 -  Welcome page with the teacher's advertisements and notices. 
--  Will have a wall to pulish the teacher's notices and posts.
+-  Have a wall to pulish the teacher's notices and posts.
 -  User Settings and User Permissions maintainin.
 -  Birtday Reminder and gitt allocation
 -  Comment section to make the conversations.
@@ -15,7 +15,8 @@ This is a common platform for the students and the teacher for the tution class 
 -  Reports room  
 -  Lecture Room  
 -  Admin panel with statical analitics
--  Time slot booking to contact teacher  
+-  Time slot booking to contact teacher 
+-  Advertiement platform to promote other classes, stationary items etc 
 
 
 ## Prerequisites
