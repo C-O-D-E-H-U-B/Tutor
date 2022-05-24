@@ -25,6 +25,10 @@ This is a common platform for the students and the teacher for the tution class 
 - [x] Apache Maven 3.5 or later 
 - [x] Node.js (v14.16.0 or compatible)
 - [x] Postgres server (v12.0 or compatible)
+- [x] React 17 or lator
+- [x] Postman Latest version (9.18.3)
+- [x] Intellij idea
+- [x] Westorm of VS code    
 
 ## Configurations
 
