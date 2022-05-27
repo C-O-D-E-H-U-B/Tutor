@@ -1,6 +1,4 @@
-package com.codehub.tutor.core.modal;
-
-import org.springframework.format.annotation.DateTimeFormat;
+package com.codehub.tutor.core.model;
 
 import javax.persistence.*;
 
@@ -14,11 +12,11 @@ public class Advertisement {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "from")
-    private DateTimeFormat from;
+    @Column(name = "fromDate")
+    private String fromDate;
 
-    @Column(name = "to")
-    private DateTimeFormat to;
+    @Column(name = "toDate")
+    private String toDate;
 
     @Column(name = "type")
     private int type;
@@ -38,20 +36,20 @@ public class Advertisement {
         this.content = content;
     }
 
-    public DateTimeFormat getFrom() {
-        return from;
+    public String getFrom() {
+        return fromDate;
     }
 
-    public void setFrom(DateTimeFormat from) {
-        this.from = from;
+    public void setFrom(String from) {
+        this.fromDate = from;
     }
 
-    public DateTimeFormat getTo() {
-        return to;
+    public String getTo() {
+        return toDate;
     }
 
-    public void setTo(DateTimeFormat to) {
-        this.to = to;
+    public void setTo(String to) {
+        this.toDate = to;
     }
 
     public int getType() {
