@@ -1,7 +1,7 @@
 package com.codehub.tutor.core.service.impl;
 
 import com.codehub.tutor.core.dao.AdvertisementDAO;
-import com.codehub.tutor.core.modal.Advertisement;
+import com.codehub.tutor.core.model.Advertisement;
 import com.codehub.tutor.core.service.api.AdvertisementServiceAPI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,9 +10,10 @@ import java.util.List;
 
 @Service
 public class AdvertisementServiceImpl implements AdvertisementServiceAPI {
-
-    @Autowired
-    AdvertisementDAO advertisementDAO;
+    private final AdvertisementDAO advertisementDAO;
+    public AdvertisementServiceImpl(AdvertisementDAO advertisementDAO){
+        this.advertisementDAO = advertisementDAO;
+    }
 
     @Override
     public List<Advertisement> getAllAds() {

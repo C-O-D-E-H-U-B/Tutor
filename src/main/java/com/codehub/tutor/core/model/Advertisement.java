@@ -1,6 +1,4 @@
-package com.codehub.tutor.core.modal;
-
-import org.springframework.format.annotation.DateTimeFormat;
+package com.codehub.tutor.core.model;
 
 import javax.persistence.*;
 
