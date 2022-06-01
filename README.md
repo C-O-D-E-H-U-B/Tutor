@@ -11,7 +11,6 @@ This is a common platform for the students and the teacher for the tution class 
 -  Comment section to make the conversations.
 -  A messenger application to communication each other. 
 -  Assignment room  
--  Exam room
 -  Reports room  
 -  Lecture Room  
 -  Admin panel with statical analitics
