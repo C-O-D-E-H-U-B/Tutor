@@ -2,12 +2,14 @@ package com.codehub.tutor.core.service.impl;
 
 import com.codehub.tutor.core.dao.StudentDAO;
 import com.codehub.tutor.core.model.Student;
-import com.codehub.tutor.core.service.api.StudentService;
+import com.codehub.tutor.core.service.api.StudentServiceAPI;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class StudentServiceImpl implements StudentService {
+@Service
+public class StudentServiceImpl implements StudentServiceAPI {
     @Autowired
     private StudentDAO studentDAO;
 

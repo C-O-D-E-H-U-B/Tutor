@@ -1,25 +1,21 @@
 package com.codehub.tutor.core.controller;
 
-import com.codehub.tutor.core.common.Constants;
 import com.codehub.tutor.core.common.Validator;
-import com.codehub.tutor.core.dao.StudentDAO;
-import com.codehub.tutor.core.exceptions.StudentException;
 import com.codehub.tutor.core.model.Student;
-import com.codehub.tutor.core.service.api.StudentService;
+import com.codehub.tutor.core.service.api.StudentServiceAPI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
 @RequestMapping("api/students")
 public class StudentController {
     @Autowired
-    private StudentService service;
+    StudentServiceAPI service;
 
     @GetMapping()
     public ResponseEntity<List<Student>> getAll() {
