@@ -1,14 +1,15 @@
 package com.codehub.tutor.core.controller;
 
+import com.codehub.tutor.core.common.Constants;
+import com.codehub.tutor.core.common.Validator;
 import com.codehub.tutor.core.dao.StudentDAO;
+import com.codehub.tutor.core.exceptions.StudentException;
 import com.codehub.tutor.core.model.Student;
+import com.codehub.tutor.core.service.api.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,15 +19,34 @@ import java.util.Optional;
 @RequestMapping("api/students")
 public class StudentController {
     @Autowired
-    private StudentDAO studentDAO;
+    private StudentService service;
 
-    @GetMapping
-    public ResponseEntity<List<Student>> getAll(){
-        return new ResponseEntity<>(studentDAO.findAll(), HttpStatus.OK);
+    @GetMapping()
+    public ResponseEntity<List<Student>> getAll() {
+        return new ResponseEntity<>(service.getAllStudent(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public Optional<Student> getStudentById(@RequestParam long id){
-        return studentDAO.findById(id);
+    public ResponseEntity<Student> getStudentById(@PathVariable long id) {
+        if (!Validator.isPositiveNumber(id)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(service.getStudentById(id), HttpStatus.OK);
+    }
+
+    @PostMapping()
+    public ResponseEntity<Student> addStudent(Student student) {
+        return new ResponseEntity<>(service.addStudent(student), HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Student> updateStudent(@PathVariable long id, Student student) {
+        if (!Validator.isPositiveNumber(id) || student.getStudentId()!=id) new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(service.updateStudentById(student), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Student> deleteStudent(@PathVariable long id) {
+        if (!Validator.isPositiveNumber(id)) new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        service.deleteStudentById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
