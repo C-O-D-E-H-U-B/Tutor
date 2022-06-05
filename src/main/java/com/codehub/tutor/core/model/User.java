@@ -1,5 +1,7 @@
 package com.codehub.tutor.core.model;
 
+import com.codehub.tutor.core.enums.UserOnlineStatus;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

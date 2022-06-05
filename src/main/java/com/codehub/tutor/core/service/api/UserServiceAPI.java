@@ -23,17 +23,16 @@ public interface UserServiceAPI {
 
     /**
      * Update user by id
-     * @param id user id
+     * @param user user
      * @return updated user
      */
-    User updateUserById(Long id);
+    User updateUserById(User user);
 
     /**
      * Delete User by user
-     * @param id user id
-     * @return deleted user
+     * @param user user
      */
-    User deleteUserById(Long id);
+    void deleteUserById(User user);
 
     /**
      * Add user
