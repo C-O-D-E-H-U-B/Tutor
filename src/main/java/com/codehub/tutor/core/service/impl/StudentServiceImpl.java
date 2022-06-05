@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class StudentServiceImpl implements StudentServiceAPI {
     @Autowired
-    private StudentDAO studentDAO;
+    StudentDAO studentDAO;
 
     @Override
     public List<Student> getAllStudent() {
@@ -20,12 +20,12 @@ public class StudentServiceImpl implements StudentServiceAPI {
 
     @Override
     public Student getStudentById(long studentId) {
-        return studentDAO.getById(studentId);
+        return studentDAO.findById(studentId).orElse(null);
     }
 
     @Override
-    public void deleteStudentById(long studentId) {
-        studentDAO.deleteById(studentId);
+    public void deleteStudent(Student student) {
+        studentDAO.delete(student);
     }
 
     @Override

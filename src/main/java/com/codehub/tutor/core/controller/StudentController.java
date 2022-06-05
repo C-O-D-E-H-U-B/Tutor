@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("api/students")
+@RequestMapping("/api/students")
 public class StudentController {
     @Autowired
     StudentServiceAPI service;
@@ -23,8 +23,7 @@ public class StudentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Student> getStudentById(@PathVariable long id) {
-        if (!Validator.isPositiveNumber(id)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    public ResponseEntity<Student> getStudentById(@PathVariable("id") int id) {
         return new ResponseEntity<>(service.getStudentById(id), HttpStatus.OK);
     }
 
@@ -40,9 +39,9 @@ public class StudentController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Student> deleteStudent(@PathVariable long id) {
-        if (!Validator.isPositiveNumber(id)) new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        service.deleteStudentById(id);
+    public ResponseEntity<Student> deleteStudent(Student student) {
+        if (!Validator.isPositiveNumber(student.getStudentId())) new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        service.deleteStudent(student);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

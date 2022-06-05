@@ -25,10 +25,9 @@ public interface StudentServiceAPI {
     /**
      * Delete student by id
      *
-     * @param studentId student id
      * @return deleted
      */
-    void deleteStudentById(long studentId);
+    void deleteStudent(Student student);
 
     /**
      * Update student by id
