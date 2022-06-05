@@ -28,15 +28,15 @@ public interface StudentService {
      * @param studentId student id
      * @return deleted
      */
-    Student deleteStudentById(long studentId);
+    void deleteStudentById(long studentId);
 
     /**
      * Update student by id
      *
-     * @param studentId student id
+     * @param student student
      * @return updated student
      */
-    Student updateStudentById(long studentId);
+    Student updateStudentById(Student student);
 
     /**
      * Add student
