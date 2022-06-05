@@ -28,6 +28,10 @@ public enum UserOnlineStatus {
         this.status = status;
     }
 
+    public int getValue(){
+        return status;
+    }
+
     public static UserOnlineStatus getValue(int value){
         for(UserOnlineStatus status: values()){
             if(status.status == value) return status;
