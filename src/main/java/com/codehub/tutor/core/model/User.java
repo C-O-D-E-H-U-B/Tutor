@@ -2,17 +2,17 @@ package com.codehub.tutor.core.model;
 
 import com.codehub.tutor.core.enums.UserOnlineStatus;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "users")
 public class User {
-    private String displayName;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "userId")
     private Long userId;
+    @Column(name = "displayName")
+    private String displayName;
     @Column(name = "password")
     private String password;
     @Column(name = "permissions")
