@@ -20,7 +20,7 @@ public class StudentServiceImpl implements StudentServiceAPI {
 
     @Override
     public Student getStudentById(long studentId) {
-        return studentDAO.findById(studentId).orElse(null);
+        return studentDAO.findById(studentId).orElse(new Student());
     }
 
     @Override
